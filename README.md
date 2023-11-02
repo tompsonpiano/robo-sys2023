@@ -1,2 +1,2 @@
 # robo-sys2023
-Classic classroom.
+ロボットシステム学の練習用ディレクトリ
