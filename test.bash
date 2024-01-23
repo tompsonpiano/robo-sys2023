@@ -10,7 +10,9 @@ ng () {
 res=0
 
 ### I/O test ###
-out=$(./plus_cal.py < testdata)
+out=$(
+    ./plus_cal.py < testdata
+    )
 [ "${out}" = Enter the first number: Enter the second number: Choose operator(+,-,*,/): 3 ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
