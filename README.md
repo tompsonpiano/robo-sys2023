@@ -3,15 +3,22 @@
 
 ロボットシステム学の練習用ディレクトリです。
 
-標準入力によって簡単な四則演算ができる電卓プログラムを制作しています。
+入力された二つの数字で四則演算ができる電卓プログラムです。
 
 
 
 
 # 使用方法
 リポジトリをダウンロードしたのち、"plus_cal" を実行してください。
-実行時に表示される指示通りに数字二つと演算子(+,-,*,/ の4つが対応)を入力すると結果が表示されます。
+実行時に表示される通りに数字二つと演算子(+,-,*,/ の4つが対応)を入力すると結果が表示されます。
 
+表示されるメッセージは、以下の三つです。
+
+First_number:一つ目の数字をここに入力してください
+Second_number:二つ目の数字をここに入力してください
+Operator:演算子(+,-,*,/)のうち一つを入力してください
+
+入力後に自動で結果が表示されます。
 
 # ソースコード
 ```
@@ -38,10 +45,10 @@ def divide(x, y):
     x / y
     return x / y
 
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
+num1 = int(input("First_number:"))
+num2 = int(input("Second_number:"))
 
-op = input("Choose operator(+,-,*,/): ")
+op = input("Operator:")
 
 if op == '+':
     ans = plus(num1,num2)

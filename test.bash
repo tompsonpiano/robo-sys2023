@@ -12,8 +12,7 @@ res=0
 
 out=$(./plus_cal < testdata)
 
-[ "${out}" = First_numberSecond_numberOperator5 ]||ng ${LINENO}
+[ "${out}" = First_number:Second_number:Operator:5 ]||ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
 exit $res
-
