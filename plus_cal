@@ -21,10 +21,10 @@ def divide(x, y):
     x / y
     return x / y
 
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
+num1 = int(input("First_number"))
+num2 = int(input("Second_number"))
 
-op = input("Choose operator(+,-,*,/): ")
+op = input("Operator")
 
 if op == '+':
     ans = plus(num1,num2)
