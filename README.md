@@ -27,7 +27,6 @@ First_number:5
 Second_number:6
 Operator:+
 11
-
 ```
 
 
