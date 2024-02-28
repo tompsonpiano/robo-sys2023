@@ -4,7 +4,7 @@
 
 import sys
 ans = 0
-
+print("calculator")
 def plus(x, y):
     x + y
     return x + y
@@ -21,26 +21,42 @@ def divide(x, y):
     x / y
     return x / y
 
-num1 = int(input("First_number:"))
-num2 = int(input("Second_number:"))
+num1 = int(input())#"First_number:"))
 
-op = input("Operator:")
+while True:
+    op = input()#("Operator:")
 
-if op == '+':
-    ans = plus(num1,num2)
-    print(ans)
+    if op == 'clear':
+        num1 = 0
+        num1 = int(input())
+        op = input()
+    
+    elif op == 'quit':
+        break
 
-elif op == '-':
-    ans = minus(num1,num2)
-    print(ans)
+    num2 = int(input())#("Second_number:"))
+
+
+    if op == '+':
+        ans = plus(num1,num2)
+        print(ans)
+        num1 = ans
+
+    elif op == '-':
+        ans = minus(num1,num2)
+        print(ans)
+        num1 = ans
     
-elif op == '*':
-    ans = multiply(num1,num2)
-    print(ans)
+    elif op == '*':
+        ans = multiply(num1,num2)
+        print(ans)
+        num1 = ans
     
-elif op == '/':
-    ans = divide(num1,num2)
-    print(ans)
-    
-else:
-    print("Please_try_again")
+    elif op == '/':
+        ans = divide(num1,num2)
+        print(ans)
+        num1 = ans
+
+    else:
+        print("error")
+        break

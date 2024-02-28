@@ -9,26 +9,41 @@ ng () {
 
 res=0
 
-
+###normal input###
 out=$(./plus_cal < test/testdata)
 
-[ "${out}" = "First_number:Second_number:Operator:5" ]||ng ${LINENO}
+[ "${out}" = "calculator
+5" ]||ng ${LINENO}
+
+###continue test###
+out=$(./plus_cal < test/testdata5)
+
+[ "${out}" = "calculator
+5
+50" ]	|| ng ${LINENO}
+###clear command test###
+out=$(./plus_cal < test/testdata6)
+
+[ "${out}" = "calculator
+5
+20" ]	|| ng ${LINENO}
 
 ###strange input###
 ###first number error###
 out=$(./plus_cal < test/testdata2)
 [ "$?" = 1 ]					|| ng ${LINENO}
-[ "${out}" = "First_number:" ]	|| ng ${LINENO}
+[ "${out}" = "calculator" ]	|| ng ${LINENO}
 
 ###second number error###
 out=$(./plus_cal < test/testdata3)
 [ "$?" = 1 ]								|| ng ${LINENO}
-[ "${out}" = "First_number:Second_number:" ]	|| ng ${LINENO}
+[ "${out}" = "calculator" ]	|| ng ${LINENO}
 
 ###operator error###
 out=$(./plus_cal < test/testdata4)
 [ "$?" = 0 ]					|| ng ${LINENO}
-[ "${out}" = "First_number:Second_number:Operator:Please_try_again" ]	|| ng ${LINENO}
+[ "${out}" = "calculator
+error" ]	|| ng ${LINENO}
 
 
 
