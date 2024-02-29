@@ -4,7 +4,7 @@
 
 import sys
 ans = 0
-print("calculator")
+
 def plus(x, y):
     x + y
     return x + y
@@ -30,9 +30,6 @@ while True:
         num1 = 0
         num1 = int(input())
         op = input()
-    
-    elif op == 'quit':
-        break
 
     num2 = int(input())#("Second_number:"))
 
