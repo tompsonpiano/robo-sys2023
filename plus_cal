@@ -31,7 +31,6 @@ while True:
         break
     
     if op == 'clear':
-        num1 = 0
         num1 = int(input())
         op = input()
     
