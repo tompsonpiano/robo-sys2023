@@ -1,5 +1,5 @@
 # robo-sys2023
-* ![test](https://github.com/tompsonpiano/robo-sys2023/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/tompsonpiano/robo-sys2023/actions/workflows/test.yml/badge.svg)
 
 ロボットシステム学の練習用ディレクトリです。
 
