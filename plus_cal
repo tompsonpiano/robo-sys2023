@@ -38,7 +38,7 @@ while True:
     elif op not in ('+', '-', '*', '/'):
         break
 
-    try:    
+    try:
         num2 = int(input())#Second number
 
     except EOFError:
