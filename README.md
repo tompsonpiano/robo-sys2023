@@ -13,11 +13,13 @@ $ git clone https://github.com/tompsonpiano/robo-sys2023.git
 ```
 
 ## 使用方法
-```
+
 一つ目の数字
+
 演算子(+,-,*,/)または操作コマンド(clear)
+
 二つ目の数字
-```
+
 
 以上の順番で一行ずつ入力すると計算結果が表示されます。
 
