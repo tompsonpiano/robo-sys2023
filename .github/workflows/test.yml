@@ -11,7 +11,4 @@ jobs:
       - name: All test  
         run: |
           git clone https://github.com/tompsonpiano/test.git
-          cd test
-          ls
-          cd ..
           ./test.bash
