@@ -38,6 +38,9 @@ while True:
         num1 = 0
         num1 = int(input())
         op = input()
+    
+    elif op not in ('+', '-', '*', '/'):
+        break
 
     try:    
         num2 = int(input())#("Second_number:"))
@@ -47,17 +50,14 @@ while True:
 
     if op == '+':
         ans = plus(num1,num2)
-        print(ans)
         num1 = ans
 
     elif op == '-':
         ans = minus(num1,num2)
-        print(ans)
         num1 = ans
     
     elif op == '*':
         ans = multiply(num1,num2)
-        print(ans)
         num1 = ans
     
     elif op == '/':
@@ -66,8 +66,9 @@ while True:
             break
         
         ans = divide(num1,num2)
-        print(ans)
         num1 = ans
 
     else:
         break
+    
+    print(ans)
