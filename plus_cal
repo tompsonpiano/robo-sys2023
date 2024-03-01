@@ -6,30 +6,26 @@ import sys
 ans = 0
 
 def plus(x, y):
-    x + y
     return x + y
 
 def minus(x, y):
-    x - y
     return x - y
 
 def multiply(x, y):
-    x * y
     return x * y
 
 def divide(x, y):
-    x / y
     return x / y
 
 try:
-    num1 = int(input())#"First_number:"))
+    num1 = int(input())#First number
 
 except EOFError:
     exit
 
 while True:
     try:
-        op = input()#("Operator:")
+        op = input()#Operator
     
     except EOFError:
         break
@@ -43,22 +39,19 @@ while True:
         break
 
     try:    
-        num2 = int(input())#("Second_number:"))
+        num2 = int(input())#Second number
 
     except EOFError:
         break
 
     if op == '+':
         ans = plus(num1,num2)
-        num1 = ans
 
     elif op == '-':
         ans = minus(num1,num2)
-        num1 = ans
     
     elif op == '*':
         ans = multiply(num1,num2)
-        num1 = ans
     
     elif op == '/':
 
@@ -66,9 +59,9 @@ while True:
             break
         
         ans = divide(num1,num2)
-        num1 = ans
 
     else:
         break
     
     print(ans)
+    num1 = ans
