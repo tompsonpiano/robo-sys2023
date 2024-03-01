@@ -21,18 +21,29 @@ def divide(x, y):
     x / y
     return x / y
 
-num1 = int(input())#"First_number:"))
+try:
+    num1 = int(input())#"First_number:"))
+
+except EOFError:
+    exit
 
 while True:
-    op = input()#("Operator:")
-
+    try:
+        op = input()#("Operator:")
+    
+    except EOFError:
+        break
+    
     if op == 'clear':
         num1 = 0
         num1 = int(input())
         op = input()
 
-    num2 = int(input())#("Second_number:"))
+    try:    
+        num2 = int(input())#("Second_number:"))
 
+    except EOFError:
+        break
 
     if op == '+':
         ans = plus(num1,num2)
@@ -50,10 +61,13 @@ while True:
         num1 = ans
     
     elif op == '/':
+
+        if num2 == 0:
+            break
+        
         ans = divide(num1,num2)
         print(ans)
         num1 = ans
 
     else:
-        print("error")
         break

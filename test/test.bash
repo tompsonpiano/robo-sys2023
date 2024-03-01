@@ -10,38 +10,49 @@ ng () {
 res=0
 
 ###normal input###
-out=$(./plus_cal < test/testdata)
+out=$(./plus_cal < test/testdata1)
 
 [ "${out}" = "5" ]||ng ${LINENO}
 
 ###continue test###
-out=$(./plus_cal < test/testdata5)
+out=$(./plus_cal < test/testdata2)
 
 [ "${out}" = "5
 50" ]	|| ng ${LINENO}
 ###clear command test###
-out=$(./plus_cal < test/testdata6)
+out=$(./plus_cal < test/testdata3)
 
 [ "${out}" = "5
 20" ]	|| ng ${LINENO}
 
 ###strange input###
 ###first number error###
-out=$(./plus_cal < test/testdata2)
+out=$(./plus_cal < test/testdata4)
 [ "$?" = 1 ]					|| ng ${LINENO}
 [ "${out}" = "" ]	|| ng ${LINENO}
 
 ###second number error###
-out=$(./plus_cal < test/testdata3)
+out=$(./plus_cal < test/testdata5)
 [ "$?" = 1 ]								|| ng ${LINENO}
 [ "${out}" = "" ]	|| ng ${LINENO}
 
 ###operator error###
-out=$(./plus_cal < test/testdata4)
+out=$(./plus_cal < test/testdata6)
 [ "$?" = 0 ]					|| ng ${LINENO}
-[ "${out}" = "error" ]	|| ng ${LINENO}
+[ "${out}" = "" ]	|| ng ${LINENO}
 
+###EOF###
+out=$(./plus_cal < test/testdata7)
+[ "$?" = 0 ]					|| ng ${LINENO}
+[ "${out}" = "" ]	|| ng ${LINENO}
 
+out=$(./plus_cal < test/testdata8)
+[ "$?" = 0 ]					|| ng ${LINENO}
+[ "${out}" = "" ]	|| ng ${LINENO}
+
+out=$(./plus_cal < test/testdata9)
+[ "$?" = 0 ]					|| ng ${LINENO}
+[ "${out}" = "" ]	|| ng ${LINENO}
 
 
 [ "$res" = 0 ] && echo OK
