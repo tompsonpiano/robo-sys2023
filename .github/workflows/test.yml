@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: All test  
-        run: bash -xv ./test/test.bash
+        run:
+          git clone https://github.com/tompsonpiano/test.git 
+          bash -xv ./test.bash
