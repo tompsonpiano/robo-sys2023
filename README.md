@@ -9,7 +9,7 @@
 ## インストール方法
 以下のコマンドでリポジトリをダウンロードしてください。
 ```
-git clone https://github.com/tompsonpiano/robo-sys2023.git
+$ git clone https://github.com/tompsonpiano/robo-sys2023.git
 ```
 
 ## 使用方法
